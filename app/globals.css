@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --color-obsidian: #0a0d14;
+  --color-panel: #121826;
+  --color-panel-2: #171f30;
+  --color-border: #232c40;
+  --color-amber: #ffbf00;
+  --color-amber-dim: #b3860a;
+  --color-text: #f5f6f8;
+  --color-text-dim: #9aa3b5;
+}
+
+@theme inline {
+  --color-obsidian: var(--color-obsidian);
+  --color-panel: var(--color-panel);
+  --color-panel-2: var(--color-panel-2);
+  --color-border: var(--color-border);
+  --color-amber: var(--color-amber);
+  --color-amber-dim: var(--color-amber-dim);
+  --color-text: var(--color-text);
+  --color-text-dim: var(--color-text-dim);
+  --font-display: var(--font-tektur);
+  --font-body: var(--font-inter);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-obsidian);
+  color: var(--color-text);
+  font-family: var(--font-inter), Inter, Arial, Helvetica, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+.ticker-track {
+  animation: ticker-scroll 32s linear infinite;
+}
+
+@keyframes ticker-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
