@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+# Opulentia Digital Core Horizon
+### Enterprise AI, analytics, cloud & trust — with a live technology news hub
 
-First, run the development server:
+Opulentia Digital Core Horizon (RC-9802444) is a standalone enterprise technology platform spanning AI orchestration, analytics, cloud infrastructure, and digital trust — paired with a continuously live tech news feed on the homepage and a dedicated news hub, in the spirit of a CNN/BBC-style ticker for the enterprise AI space.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+[![Live Demo](https://img.shields.io/badge/Live_Demo-opulentia--digital.vercel.app-1D4ED8?style=for-the-badge&logo=vercel)](https://opulentia-digital.vercel.app)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repo-181717?style=for-the-badge&logo=github)](https://github.com/jayblast-spec/opulentia-digital-core-horizon)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js)
+![React](https://img.shields.io/badge/React-1D4ED8?style=flat-square&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=18&pause=1000&color=1D4ED8&width=760&lines=Live+tech+news%2C+refreshed+continuously;Four+products%2C+one+enterprise+platform;No+fabricated+metrics+%E2%80%94+honest+by+design)](https://git.io/typing-svg)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+</div>
 
-## Learn More
+## What It Does
 
-To learn more about Next.js, take a look at the following resources:
+Opulentia Digital Core Horizon presents four platform products — Horizon Intelligence (AI orchestration), Core Analytics, Opulentia Cloud, and Digital Trust Suite — each with its own detail page, alongside a genuinely live technology news hub pulled from a real public news API and refreshed every few minutes, plus a company-authored Insights/blog section kept deliberately separate from the third-party news feed.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## How It Works
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `app/page.tsx` — homepage: hero, live news ticker, product grid, honest capability-focused positioning section, and a live news preview
+- `app/news/page.tsx` + `lib/news.ts` — News Hub: fetches real, current tech headlines from the Hacker News Algolia API (`search_by_date`, sorted by recency), links out to the original publisher, revalidates every 5 minutes
+- `components/NewsTicker.tsx` — homepage scrolling ticker, sourced from the same live feed
+- `app/services/page.tsx` + `app/services/[slug]/page.tsx` + `lib/products.ts` — the four product overview and detail pages
+- `app/blog/page.tsx` + `app/blog/[slug]/page.tsx` + `lib/posts.ts` — company-authored Insights posts, distinct from the third-party News Hub
+- `app/about`, `app/careers`, `app/contact` — standard company pages
 
-## Deploy on Vercel
+## Live
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[opulentia-digital.vercel.app](https://opulentia-digital.vercel.app)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router, Turbopack) |
+| Language | TypeScript |
+| Styling | Tailwind CSS v4 |
+| Fonts | Tektur (display), Inter (body) |
+| Live data | Hacker News Algolia API |
+| Hosting | Vercel |
+
+<div align="center">
+
+![Footer banner](https://capsule-render.vercel.app/api?type=waving&color=0:1D4ED8,55:0B1E3D,100:020617&height=120&section=footer&text=Opulentia%20Digital%20Core%20Horizon&fontSize=24&fontColor=ffffff&desc=RC-9802444&descAlignY=75)
+
+</div>
