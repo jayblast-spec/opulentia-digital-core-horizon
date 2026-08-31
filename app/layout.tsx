@@ -15,10 +15,26 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://opulentia-digital.vercel.app";
+const description =
+  "Opulentia Digital Core Horizon (RC-9802444) — enterprise AI, analytics, and cloud infrastructure, with a live technology news hub.";
+
 export const metadata: Metadata = {
   title: "Opulentia Digital Core Horizon",
-  description:
-    "Opulentia Digital Core Horizon (RC-9802444) — enterprise AI, analytics, and cloud infrastructure, with a live technology news hub.",
+  description,
+  metadataBase: new URL(siteUrl),
+  openGraph: {
+    title: "Opulentia Digital Core Horizon",
+    description,
+    url: siteUrl,
+    siteName: "Opulentia Digital Core Horizon",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Opulentia Digital Core Horizon",
+    description,
+  },
 };
 
 export default function RootLayout({
