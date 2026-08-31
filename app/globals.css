@@ -46,7 +46,7 @@ body {
 }
 
 .ticker-track {
-  animation: ticker-scroll 32s linear infinite;
+  animation: ticker-scroll 90s linear infinite;
 }
 
 @keyframes ticker-scroll {
